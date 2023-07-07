@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Skills from './components/Skills';
+import Users from './components/Users';
 
 function App() {
+  const skills = [
+    {id:1, name: "vijay"},
+    {id:2, name: "writing"},
+    {id:3, name: "reading"}
+]
+const handleDelete = (userId) =>{
+  alert(userId)
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Skills skills={skills}/>
+    <Users handleDelete={handleDelete}/>
   );
 }
 
